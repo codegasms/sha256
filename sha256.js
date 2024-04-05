@@ -330,5 +330,7 @@ function hashSHA256(message) {
  * @returns {string} - SHA-256 Hashed Message
  */
 function hashString(message) {
-    return hashSHA256(toUTF8String(strinmessage));
+    return hashSHA256(toUTF8String(message));
 }
+
+export default hashString;
