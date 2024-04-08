@@ -351,9 +351,4 @@ function hashString(message, format) {
     }
 }
 
-// console.log(hashString('abc', 'hex'));
-// console.log(hashString('abc', 'binary'));
-// console.log(hashString('abc', 'base64'));
-// console.log(hashString('abc', 'utf8'));
-
-// export default hashString;
+module.exports = hashString;
