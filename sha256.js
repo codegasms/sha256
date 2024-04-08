@@ -327,10 +327,33 @@ function hashSHA256(message) {
 /**
  * Converts a String into SHA-256 Hash
  * @param {string} message - Message to be Hashed (In Human-Readable Strings)
+ * @param {string} format - Output format : hex, binary, base64
  * @returns {string} - SHA-256 Hashed Message
  */
-function hashString(message) {
-    return hashSHA256(toUTF8String(message));
+function hashString(message, format) {
+    var hash = hashSHA256(toUTF8String(message));
+    if (format === 'hex') {
+        return hash;
+    }
+
+    else if (format === 'binary') {
+        var buffer = Buffer.from(hash, 'hex');
+        return buffer.toString('binary');
+    }
+
+    else if (format === 'base64') {
+        var buffer = Buffer.from(hash, 'hex');
+        return buffer.toString('base64');
+    }
+
+    else {
+        throw new Error('Invalid Format');
+    }
 }
 
-export default hashString;
+// console.log(hashString('abc', 'hex'));
+// console.log(hashString('abc', 'binary'));
+// console.log(hashString('abc', 'base64'));
+// console.log(hashString('abc', 'utf8'));
+
+// export default hashString;
