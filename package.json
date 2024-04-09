@@ -1,6 +1,6 @@
 {
   "name": "@codegasms/sha256",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SHA-256 Implementation in PureJS with ref to FIPS PUB 180-2",
   "main": "sha256.js",
   "directories": {
