@@ -1,5 +1,17 @@
 # SHA-256 Algorithm
 
+## Usage
+
+```javascript
+    const hashString = require('@codegasms/sha256');
+
+    const message = 'Hello World';
+    
+    const hashedMessageHex = hashString(message, 'hex');
+    const hashedMessageBinary = hashString(message, 'binary');
+    const hashedMessageBase64 = hashString(message, 'base64');
+```
+
 ## Unicode Codepoint To UTF-8 Conversion
 
 ```Unicode``` is represented as ```U+XXXX```, where ```XXXX``` is a hexadecimal number. ```UTF-8``` is a direct mapping of the unicode characters i.e. Encoding format of Unicode characters in one-byte units, hence the suffix ```-8```, more specifically it is a conversion of a codepoint into a set of one to four bytes.
